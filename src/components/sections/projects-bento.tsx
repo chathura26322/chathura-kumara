@@ -329,7 +329,7 @@ export function Projects() {
   ];
 
   return (
-    <Section id="projects" className="-mt-1 pt-8 pb-28 px-4 bg-gradient-to-b from-blue-50/90 via-white to-slate-50/90 relative overflow-hidden">
+    <Section id="projects" className="-mt-1 pt-8 pb-36 px-4 bg-gradient-to-b from-blue-50/90 via-white to-slate-50/90 relative overflow-hidden">
       {/* Subtle background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
         <div className="absolute top-32 left-32 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
@@ -382,31 +382,58 @@ export function Projects() {
           </BentoGrid>
         </motion.div>
 
-        {/* Call to Action */}
+        {/* Call to Action - Enhanced */}
         <motion.div
-          className="text-center mt-16 mb-20"
+          className="text-center mt-20 mb-24 relative z-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-600 mb-6">Want to see more projects or collaborate?</p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button
-              onClick={() => window.open("https://github.com", "_blank")}
-              className="bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <Github className="w-5 h-5 mr-2" />
-              View All Projects
-            </Button>
-            <Button
-              variant="outline"
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-2 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <ExternalLink className="w-5 h-5 mr-2" />
-              Let&apos;s Collaborate
-            </Button>
+          {/* Enhanced background for better visibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-white/80 to-purple-50/50 rounded-3xl border border-gray-200/50 shadow-lg backdrop-blur-sm -mx-8 -my-8"></div>
+          
+          <div className="relative z-10 py-8 px-6">
+            {/* Enhanced header */}
+            <div className="mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                Ready to Collaborate?
+              </h3>
+              <p className="text-gray-600 text-lg mb-2">Want to see more projects or collaborate on something amazing?</p>
+              <div className="flex items-center justify-center gap-2 mt-4">
+                <div className="h-1 w-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div className="h-1 w-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                <div className="h-1 w-2 bg-pink-500 rounded-full"></div>
+              </div>
+            </div>
+            
+            {/* Enhanced buttons with better visibility */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button
+                onClick={() => window.open("https://github.com", "_blank")}
+                className="group bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 min-w-[200px]"
+              >
+                <Github className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="font-semibold">View All Projects</span>
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                className="group border-3 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 min-w-[200px] bg-white/90 backdrop-blur-sm"
+              >
+                <ExternalLink className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="font-semibold">Let&apos;s Collaborate</span>
+              </Button>
+            </div>
+            
+            {/* Additional visual separator */}
+            <div className="mt-8 flex justify-center">
+              <div className="flex gap-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

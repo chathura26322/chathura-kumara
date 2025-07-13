@@ -104,7 +104,7 @@ export function Hero() {
                 Hi, I&apos;m
               </h1>
               <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight bg-transparent px-2">
-                <ColourfulText text="Chathura Kumara" />
+                <ColourfulText text="Naveesha" />
               </div>
             </motion.div>
 
@@ -169,7 +169,7 @@ export function Hero() {
                 {[
                   { icon: Github, url: "https://github.com", label: "GitHub" },
                   { icon: Linkedin, url: "https://linkedin.com", label: "LinkedIn" },
-                  { icon: Mail, url: "mailto:chathura@example.com", label: "Email" },
+                  { icon: Mail, url: "mailto:naveesha@example.com", label: "Email" },
                 ].map(({ icon: Icon, url, label }) => (
                   <motion.div key={label} variants={socialVariants}>
                     <Button

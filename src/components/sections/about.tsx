@@ -175,8 +175,8 @@ export function About() {
                 
                 {/* Your profile image */}
                 <Image
-                  src="/profile.jpg"
-                  alt="Chathura Kumara - Web Developer"
+                  src="/naveesha.jpg"
+                  alt="Naveesha Ekanayaka - Web Developer"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority

@@ -97,9 +97,9 @@ export function PageLoader({ isLoading, onComplete }: PageLoaderProps) {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <div className="text-4xl md:text-5xl font-bold">
-                <ColourfulText text="CK" />
+                <ColourfulText text="NE" />
               </div>
-              <p className="text-sm text-gray-600 mt-2 font-medium">Chathura Kumara</p>
+              <p className="text-sm text-gray-600 mt-2 font-medium">Naveesha Ekanayaka</p>
             </motion.div>
 
             {/* Loading Spinner */}

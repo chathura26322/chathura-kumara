@@ -201,7 +201,7 @@ export function Projects() {
   };
 
   return (
-    <Section id="projects" className="py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+    <Section id="projects" className="py-20 sm:py-24 lg:py-32 pb-32 sm:pb-40 lg:pb-48 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/20 rounded-full mix-blend-multiply filter blur-3xl"></div>
@@ -234,37 +234,77 @@ export function Projects() {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 sm:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 sm:mb-12">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action - Enhanced for Better Visibility */}
         <motion.div
-          className="text-center mt-4 sm:mt-8"
+          className="text-center mt-4 sm:mt-6 relative z-50"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
+          style={{ 
+            marginBottom: '60px',
+            paddingBottom: '30px',
+            minHeight: '160px'
+          }}
         >
-          <p className="text-gray-600 mb-8 text-lg leading-relaxed">Want to see more projects or collaborate on something amazing?</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={() => window.open("https://github.com", "_blank")}
-              className="bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-base font-medium"
-            >
-              <Github className="w-5 h-5 mr-3" />
-              View All Projects
-            </Button>
-            <Button
-              variant="outline"
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-2 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-base font-medium"
-            >
-              <ExternalLink className="w-5 h-5 mr-3" />
-              Let&apos;s Collaborate
-            </Button>
+          {/* Enhanced background container for better visibility */}
+          <div className="relative mx-auto max-w-4xl" style={{ minHeight: '140px' }}>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/70 via-white/90 to-purple-50/70 rounded-3xl border-2 border-gray-300/80 shadow-2xl backdrop-blur-sm -mx-8 -my-8"></div>
+            
+            <div className="relative z-10 py-8 px-8">
+              {/* Enhanced title section */}
+              <div className="mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  Ready to <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Collaborate?</span>
+                </h3>
+                <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                  Want to see more projects or collaborate on something amazing?
+                </p>
+                
+                {/* Decorative elements */}
+                <div className="flex items-center justify-center gap-3 mt-6">
+                  <div className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                  <Star className="text-yellow-500 fill-current" size={20} />
+                  <div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                </div>
+              </div>
+              
+              {/* Enhanced buttons with much better visibility */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Button
+                  onClick={() => window.open("https://github.com", "_blank")}
+                  className="group relative bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white px-10 py-5 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 text-lg font-semibold min-w-[220px] transform hover:-translate-y-2 hover:scale-105 border-2 border-gray-800"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl"></div>
+                  <Github className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                  <span>View All Projects</span>
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  className="group relative border-3 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white px-10 py-5 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 text-lg font-semibold min-w-[220px] transform hover:-translate-y-2 hover:scale-105 bg-white/95 backdrop-blur-sm"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-50/80 to-purple-50/80 rounded-2xl group-hover:from-blue-500 group-hover:to-blue-600 transition-all duration-300"></div>
+                  <ExternalLink className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300 relative z-10" />
+                  <span className="relative z-10">Let&apos;s Collaborate</span>
+                </Button>
+              </div>
+              
+              {/* Additional visual indicators */}
+              <div className="mt-8 flex justify-center">
+                <div className="flex gap-3">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="w-3 h-3 bg-pink-500 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

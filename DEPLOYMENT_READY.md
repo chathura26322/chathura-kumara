@@ -2,6 +2,8 @@
 
 ## Cleanup Summary
 
+### Owner: Naveesha Ekanayaka
+
 ### Removed Unused Files:
 - ❌ `src/app/demo/` - Demo page and routes
 - ❌ `src/components/ui/draggable-card-demo.tsx` - Demo component

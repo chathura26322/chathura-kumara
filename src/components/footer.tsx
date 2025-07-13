@@ -148,7 +148,7 @@ export function Footer() {
           >
             <div className="flex flex-col md:flex-row items-center gap-4">
               <p className="text-gray-500 text-base">
-                © 2025 Chathura Kumara. All rights reserved.
+                © 2025 Naveesha Ekanayaka. All rights reserved.
               </p>
               <div className="flex items-center gap-2">
                 <span className="w-1 h-1 bg-gray-300 rounded-full hidden md:block"></span>

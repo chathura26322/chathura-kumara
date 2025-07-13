@@ -138,10 +138,10 @@ export function Navigation() {
           >
             <div className="flex items-center">
               <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Chathura
+                Naveesha
               </span>
               <span className="ml-2 text-xs sm:text-sm font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:inline">
-                Kumara
+                Ekanayaka
               </span>
             </div>
             <div className="h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

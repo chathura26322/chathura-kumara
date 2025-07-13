@@ -190,7 +190,7 @@ export function Contact() {
               <motion.div 
                 className="group relative p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                 whileHover={{ scale: 1.02, y: -5 }}
-                onClick={() => window.open('mailto:chathura@example.com')}
+                onClick={() => window.open('mailto:naveesha@example.com')}
               >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl group-hover:from-blue-200 group-hover:to-purple-200 transition-all duration-300 shadow-sm">
@@ -198,7 +198,7 @@ export function Contact() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">chathura@example.com</p>
+                    <p className="text-gray-600">naveesha@example.com</p>
                   </div>
                   <div className="text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
                     →
@@ -492,11 +492,11 @@ export function Contact() {
               {/* Quick contact */}
               <div className="mt-10 pt-8 border-t-2 border-gray-300">
                 <a
-                  href="mailto:chathura@example.com"
+                  href="mailto:naveesha@example.com"
                   className="inline-flex items-center gap-4 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group p-4 rounded-2xl hover:bg-blue-50"
                 >
                   <Mail className="w-6 h-6 text-blue-700 group-hover:text-purple-700 transition-colors drop-shadow-lg" />
-                  chathura@example.com
+                  naveesha@example.com
                   <span className="text-blue-600 group-hover:translate-x-2 transition-transform text-2xl">→</span>
                 </a>
               </div>

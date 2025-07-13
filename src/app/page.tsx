@@ -43,7 +43,7 @@ export default function Home() {
       </Suspense>
       
       <Suspense fallback={<TestimonialsLoading />}>
-        <div id="testimonials" className="mt-16 sm:mt-20 lg:mt-24">
+        <div id="testimonials" className="mt-8 sm:mt-12 lg:mt-16">
           <Testimonials />
         </div>
       </Suspense>
