@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --success: 142 71% 45%;
+    --warning: 48 89% 60%;
+    --radius: 0.5rem;
+  }
+
+  /* Responsive text sizing */
+  html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: inherit;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Responsive image defaults */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .dark {
+    --background: 0 0% 5.1%;  /* #0D0D0D */
+    --foreground: 0 0% 87.8%; /* #E0E0E0 */
+    --card: 0 0% 10.2%;       /* #1A1A1A */
+    --card-foreground: 0 0% 87.8%; /* #E0E0E0 */
+    --popover: 0 0% 10.2%;    /* #1A1A1A */
+    --popover-foreground: 0 0% 87.8%; /* #E0E0E0 */
+    --primary: 207 74% 60%;   /* #4C9EEB */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 16.5%;  /* #2A2A2A */
+    --secondary-foreground: 0 0% 62.7%; /* #A0A0A0 */
+    --muted: 0 0% 16.5%;      /* #2A2A2A */
+    --muted-foreground: 0 0% 62.7%; /* #A0A0A0 */
+    --accent: 6 93% 71%;      /* #FF6B6B */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 6 93% 71%; /* #FF6B6B */
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 16.5%;     /* #2A2A2A */
+    --input: 0 0% 16.5%;      /* #2A2A2A */
+    --ring: 207 74% 60%;      /* #4C9EEB */
+    --success: 142 71% 45%;   /* #2ECC71 */
+    --warning: 48 89% 60%;    /* #F1C40F */
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Custom selection */
+::selection {
+  background: hsl(var(--primary) / 0.2);
+  color: hsl(var(--foreground));
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Seamless section transitions */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove any potential gaps between sections */
+.section-seamless {
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+/* Enhanced card styling */
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-3xl {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced hover effects */
+.hover\:shadow-lg:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+/* Better button styling */
+.bg-primary {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.9));
+}
+
+/* Enhanced form elements */
+input, textarea {
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+}
+
+/* Modern table styling */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+th {
+  background-color: hsl(var(--muted));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+td {
+  border-bottom: 1px solid hsl(var(--border) / 0.5);
+}
+
+tr:hover {
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+/* 3D Transform utilities */
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+/* Enhanced card perspective */
+[perspective] {
+  perspective: 1000px;
+}
+
+/* Smooth transitions for draggable elements */
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+/* Card entrance animations */
+@keyframes cardFloat {
+  0% {
+    transform: translateY(20px) rotateX(10deg) rotateY(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+.card-entrance {
+  animation: cardFloat 0.8s ease-out forwards;
+}
+
+/* Line clamp utilities */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Blob animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
