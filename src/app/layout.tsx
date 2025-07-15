@@ -1,10 +1,31 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, IBM_Plex_Sans, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+// Professional font combinations
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: 'swap',
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: 'swap',
+});
+
+const ibmPlex = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex",
+  display: 'swap',
+});
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: 'swap',
 });
 
 export const viewport: Viewport = {
@@ -49,7 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${geist.variable} ${geistMono.variable} ${ibmPlex.variable} ${inter.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

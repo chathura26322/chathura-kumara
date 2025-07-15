@@ -104,7 +104,7 @@ export function Hero() {
                 Hi, I&apos;m
               </h1>
               <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight bg-transparent px-2">
-                <ColourfulText text="Naveesha" />
+                <ColourfulText text="Naveesha " />
               </div>
             </motion.div>
 
